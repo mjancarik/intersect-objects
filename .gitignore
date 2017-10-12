@@ -1,0 +1,8 @@
+*.swp
+.DS_Store
+.idea
+.sublime-gulp.cache
+node_modules/
+coverage
+.nyc_output
+npm-debug.log
