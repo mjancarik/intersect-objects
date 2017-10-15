@@ -12,4 +12,8 @@ describe('intersectObjects method', () => {
   it('should return intersection', () => {
     expect(intersectObjects(object1, object2)).toEqual(intersection)
   })
+
+  it('should return empty object for calling without arguments', () => {
+	expect(intersectObjects()).toEqual({});
+  })
 })
