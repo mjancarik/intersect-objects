@@ -1,7 +1,10 @@
 Object.defineProperty(exports, '__esModule', {
   value: true
 })
-
+/**
+ * @param {...Object.<string, *>} rest
+ * @return {Object.<string, *>}
+ */
 function intersectObjects(...rest) {
   const objectsKeys = rest.map(object => Object.keys(object))
 
