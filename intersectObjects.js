@@ -3,7 +3,8 @@ Object.defineProperty(exports, '__esModule', {
 })
 
 const DEV = 'development'
-const ENV = process && process.env ? process.env.NODE_ENV : DEV
+const ENV =
+  typeof process !== 'undefined' && process && process.env ? process.env.NODE_ENV : DEV
 
 /**
  * @param {...Object.<string, *>} rest
