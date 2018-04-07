@@ -1,67 +1,72 @@
 {
-	"name": "intersect-objects",
-	"version": "0.1.1",
-	"description": "The intersect-objects module help you with creating object intersection.",
-	"main": "intersectObjects.js",
-	"scripts": {
-		"test": "node_modules/.bin/jest",
-		"lint": "node_modules/.bin/eslint --fix *.js __tests__/",
-		"preversion": "npm test && npm run lint",
-		"postversion": "git commit -am $npm_package_version && git tag $npm_package_version && git push origin master && git push --tags && npm publish"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/mjancarik/intersect-objects.git"
-	},
-	"keywords": [
-		"intersect",
-		"objects",
-		"javascript",
-		"ES6"
-	],
-	"publishConfig": {
-		"registry": "http://registry.npmjs.org/"
-	},
-	"author": "Miroslav Jancarik",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/mjancarik/intersect-objects/issues"
-	},
-	"homepage": "https://github.com/mjancarik/intersect-objects#readme",
-	"devDependencies": {
-		"babel-core": "^6.26.0",
-		"babel-eslint": "^8.0.0",
-		"babel-plugin-transform-es2015-modules-commonjs": "6.26.0",
-		"coveralls": "^3.0.0",
-		"eslint": "^4.3.0",
-		"eslint-config-last": "^0.0.3",
-		"eslint-config-prettier": "^2.6.0",
-		"eslint-plugin-jasmine": "^2.8.4",
-		"eslint-plugin-jest": "^21.1.0",
-		"eslint-plugin-prettier": "^2.3.1",
-		"jest": "^21.1.0",
-		"prettier": "^1.7.0"
-	},
-	"jest": {
-		"bail": true,
-		"verbose": true,
-		"coverageThreshold": {
-			"global": {
-				"functions": 70,
-				"lines": 70,
-				"statements": 70
-			}
-		},
-		"testEnvironment": "node",
-		"modulePaths": [
-			"<rootDir>/"
-		],
-		"transform": {
-			"^.+\\.js$": "./preprocess.js"
-		},
-		"testPathIgnorePatterns": [
-			"__snapshots__",
-			"/node_modules/"
-		]
-	}
+    "name": "intersect-objects",
+    "version": "0.1.1",
+    "description": "The intersect-objects module help you with creating object intersection.",
+    "main": "intersectObjects.js",
+    "scripts": {
+        "test": "NODE_ENV=development node_modules/.bin/jest --no-watchman",
+        "lint": "node_modules/.bin/eslint --fix *.js __tests__/",
+        "preversion": "npm test && npm run lint",
+        "postversion": "git commit -am $npm_package_version && git tag $npm_package_version && git push origin master && git push --tags && npm publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mjancarik/intersect-objects.git"
+    },
+    "keywords": [
+        "intersect",
+        "objects",
+        "javascript",
+        "ES6"
+    ],
+    "publishConfig": {
+        "registry": "http://registry.npmjs.org/"
+    },
+    "author": "Miroslav Jancarik",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mjancarik/intersect-objects/issues"
+    },
+    "homepage": "https://github.com/mjancarik/intersect-objects#readme",
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-eslint": "^8.0.0",
+        "babel-plugin-transform-es2015-modules-commonjs": "6.26.0",
+        "coveralls": "^3.0.0",
+        "eslint": "^4.3.0",
+        "eslint-config-last": "^0.0.3",
+        "eslint-config-prettier": "^2.6.0",
+        "eslint-plugin-jasmine": "^2.8.4",
+        "eslint-plugin-jest": "^21.1.0",
+        "eslint-plugin-prettier": "^2.3.1",
+        "jest": "^21.1.0",
+        "prettier": "^1.7.0"
+    },
+    "browserify": {
+        "transform": [
+            "babelify"
+        ]
+    },
+    "jest": {
+        "bail": true,
+        "verbose": true,
+        "coverageThreshold": {
+            "global": {
+                "functions": 70,
+                "lines": 70,
+                "statements": 70
+            }
+        },
+        "testEnvironment": "node",
+        "modulePaths": [
+            "<rootDir>/"
+        ],
+        "transform": {
+            "^.+\\.js$": "./preprocess.js"
+        },
+        "testPathIgnorePatterns": [
+            "__snapshots__",
+            "/node_modules/"
+        ]
+    }
 }

@@ -21,5 +21,13 @@ const object1 = { a: 'a', b: 'b', c: 'c' }
 const object2 = { a: 'a', b: 'x' }
 
 intersectObjects(object1, object2) // { a: 'a', b: 'x' }
+// intersectObjects(...spread)
+
+intersectObjects() // {}
+
+intersectObjects(undefined) // TypeError
+intersectObjects(null) // TypeError
+intersectObjects(false) // TypeError
+intersectObjects(1) // TypeError
 
 ```

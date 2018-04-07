@@ -16,4 +16,12 @@ describe('intersectObjects method', () => {
   it('should return empty object for calling without arguments', () => {
     expect(intersectObjects()).toEqual({})
   })
+
+  it('should throwing TypeErrro for calling with undefined', () => {
+    expect(() => intersectObjects(undefined)).toThrow(TypeError)
+  })
+
+  it('should throwing TypeError for calling with null', () => {
+    expect(() => intersectObjects({}, null)).toThrow(TypeError)
+  })
 })

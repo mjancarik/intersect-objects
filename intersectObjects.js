@@ -1,11 +1,26 @@
 Object.defineProperty(exports, '__esModule', {
   value: true
 })
+
+const DEV = 'development'
+const ENV = process && process.env ? process.env.NODE_ENV : DEV
+
 /**
  * @param {...Object.<string, *>} rest
  * @return {Object.<string, *>}
  */
 function intersectObjects(...rest) {
+  if (ENV === DEV) {
+    rest.forEach(object => {
+      if (!object || typeof object !== 'object') {
+        throw new TypeError(
+          `You are calling intersectObjects with ${rest
+            .map(object => `${object}`)
+            .join(', ')}. It only accepts objects.`
+        )
+      }
+    })
+  }
   const objectsKeys = rest.map(object => Object.keys(object))
 
   const intersectedKeys = (objectsKeys[0] || []).filter(key => {
