@@ -1,6 +1,6 @@
 {
     "name": "intersect-objects",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "The intersect-objects module help you with creating object intersection.",
     "main": "intersectObjects.js",
     "scripts": {
