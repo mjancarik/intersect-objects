@@ -1,7 +1,5 @@
 # intersect-objects
 
-[![Build Status](https://travis-ci.org/mjancarik/intersect-objects.svg?branch=master)](https://travis-ci.org/mjancarik/intersect-objects) [![Dependency Status](https://david-dm.org/mjancarik/intersect-objects.svg)](https://david-dm.org/mjancarik/intersect-objects) [![Coverage Status](https://coveralls.io/repos/github/mjancarik/intersect-objects/badge.svg?branch=master)](https://coveralls.io/github/mjancarik/intersect-objects?branch=master)
-
 The intersect-objects module help you with creating object intersection.
 
 ## Installation
