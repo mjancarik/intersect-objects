@@ -1,35 +1,46 @@
 module.exports = {
-	'extends': ['last'],
-	'rules': {
+	root: true,
+	extends: [
+		'eslint:recommended',
+		'plugin:@typescript-eslint/eslint-recommended',
+		'plugin:@typescript-eslint/recommended',
+		'prettier',
+	],
+	parser: '@typescript-eslint/parser',
+	rules: {
 		'prettier/prettier': [
-			'error', {
+			'error',
+			{
 				singleQuote: true,
-				printWidth: 90,
-				semi: false
-			}
+				bracketSameLine: false,
+			},
 		],
 
-		'no-console': ['error', {
-			allow: ['warn', 'error', 'log']
-		}]
+		'@typescript-eslint/no-empty-function': ['error', { allow: ['methods'] }],
+
+		'no-console': [
+			'error',
+			{
+				allow: ['warn', 'error', 'log'],
+			},
+		],
 	},
-	'plugins': [
-		'jest',
-		'prettier',
-		'jasmine'
-	],
-	'settings': {
-		'ecmascript': 6
+	plugins: ['prettier', 'jasmine'],
+	settings: {
+		ecmascript: 2022,
 	},
-	'parserOptions': {
-		'sourceType': 'module',
-		'ecmaVersion': 6
+	parserOptions: {
+		sourceType: 'module',
+		ecmaVersion: 13,
 	},
-	'env': {
-		'browser': true,
-		'node': true,
-		'es6': true,
-		'jasmine': true,
-		'jest/globals': true
-	}
+	env: {
+		node: true,
+		browser: true,
+		es6: true,
+		jest: true,
+		jasmine: true,
+	},
+	globals: {
+		globalThis: false,
+	},
 };

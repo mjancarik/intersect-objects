@@ -1,5 +1,5 @@
 __tests__/
+src/
+tsup.config.mjs
 .eslintrc.js
 .gitignore
-.travis.yml
-preprocess.js

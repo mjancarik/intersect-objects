@@ -15,7 +15,7 @@ npm i intersect-objects
 ## Usage
 
 ```javascript
-import intersectObjects from 'intersect-objects';
+import { intersectObjects } from 'intersect-objects';
 
 const object1 = { a: 'a', b: 'b', c: 'c' }
 const object2 = { a: 'a', b: 'x' }
