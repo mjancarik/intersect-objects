@@ -3,3 +3,6 @@ src/
 tsup.config.mjs
 .eslintrc.js
 .gitignore
+node_modules/
+.history/
+.git/

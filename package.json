@@ -14,8 +14,8 @@
     "typings": "dist/index.d.ts",
     "scripts": {
         "test": "node --test",
-        "lint": "node_modules/.bin/eslint --fix ./src/**/*.mjs ./src/*.mjs",
-        "build": "node_modules/.bin/tsup --dts",
+        "lint": "eslint --fix ./src/**/*.mjs ./src/*.mjs",
+        "build": "tsup --dts",
         "preversion": "npm test && npm run lint && npm run build",
         "postversion": "git commit -am $npm_package_version && git tag $npm_package_version && git push origin master && git push --tags && npm publish"
     },
@@ -30,7 +30,7 @@
         "ES6"
     ],
     "publishConfig": {
-        "registry": "http://registry.npmjs.org/"
+        "registry": "https://registry.npmjs.org/"
     },
     "author": "Miroslav Jancarik",
     "license": "MIT",
